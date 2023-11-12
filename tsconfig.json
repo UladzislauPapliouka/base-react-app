@@ -18,8 +18,22 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Aliases
+
+      If there is index file in folder you should add same path twice:
+
+      "@root/*": ["./*"],
+      "@root": ["./"],
+
+    */
+    "baseUrl": "src",
+    "paths": {
+      "@root/*": ["./*"],
+      "@assets*": ["./assets/*"]
+    }
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
 }
